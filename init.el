@@ -16,6 +16,9 @@
 ;; [2017-Mar-15 GYL] configuration of linum-mode
 (setq linum-format "%d ")
 
+;; [2019-Oct-06 GYL] need to set up emacs to default to dark background
+(setq frame-background-mode 'dark)
+
 ;; start package manager
 (require 'package)
 (package-initialize)
