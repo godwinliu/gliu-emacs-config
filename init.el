@@ -35,6 +35,9 @@
 (add-to-list 'auto-mode-alist
 	     '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 
+;; [2019-Oct-06 GYL] this didn't load in GCP - so attempting to add subdir to the load path
+(add-to-list 'load-path "~/.emacs.d/web-mode/")
+
 ;; [2017-Mar-15 GYL] add support for web-mode - can't seem to get this to work at the moment
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
