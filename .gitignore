@@ -1,4 +1,6 @@
 web-mode
+yaml-mode
+/yaml-mode/*
 /web-mode/*
 /auto-save-list/*
 /elpa/*
