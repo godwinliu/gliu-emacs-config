@@ -23,13 +23,18 @@
 (require 'package)
 (package-initialize)
 
+;; [2019-Oct-10 GYL] recommended package repos from: emacswiki.org/emacs/ELPA
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+			 ("melpa" . "https://melpa.org/packages/")))
+
+;; [2019-Oct-10 GYL] not sure marmalade repo is still active - emacs couldn't use it..
 ;; add marmalade repo [2015-apr-10 GYL]
 ;;   this may not be needed later when package.el and knowledge
 ;;   on how to package properly for it is more widespread.  For now
 ;;   marmalade is an interim repo solution which enables access to
 ;;   a much broader set of tools than available in the vanilla elpa repo
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;;(add-to-list 'package-archives
+;;	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
 
 ;; [2017-Mar-15 GYL] add a hook for line numbering in ruby-mode
 (add-hook 'ruby-mode-hook' (lambda () (linum-mode 1)))
@@ -40,6 +45,10 @@
 
 ;; [2019-Oct-06 GYL] this didn't load in GCP - so attempting to add subdir to the load path
 (add-to-list 'load-path "~/.emacs.d/web-mode/")
+(add-to-list 'load-path "~/.emacs.d/yaml-mode/")
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;; [2017-Mar-15 GYL] add support for web-mode - can't seem to get this to work at the moment
 (require 'web-mode)
