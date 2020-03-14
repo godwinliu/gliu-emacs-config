@@ -65,7 +65,7 @@
 ;; [2020-Mar-14 GYL] customize javascript-mode
 (defun my-javascript-mode-hook ()
   "Hooks for Javascript mode."
-  (setq js-indent-level 2)
+;;  (setq js-indent-level 2)
   (linum-mode 1)
   )
 (add-hook 'js-mode-hook 'my-javascript-mode-hook)
