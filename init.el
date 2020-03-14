@@ -62,3 +62,18 @@
   )
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
+;; [2020-Mar-14 GYL] customize javascript-mode
+(defun my-javascript-mode-hook ()
+  "Hooks for Javascript mode."
+  (setq js-indent-level 2)
+  (linum-mode 1)
+  )
+(add-hook 'js-mode-hook 'my-javascript-mode-hook)
+
+;; [2020-Mar-14 GYL] customize pug-mode
+(defun my-pug-mode-hook ()
+  "Hooks for Pug (Jade) mode."
+  (setq pug-tab-width 2)
+  (linum-mode 1)
+  )
+(add-hook 'pug-mode-hook 'my-pug-mode-hook)
