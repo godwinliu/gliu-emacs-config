@@ -74,6 +74,7 @@
 (defun my-pug-mode-hook ()
   "Hooks for Pug (Jade) mode."
   (setq pug-tab-width 2)
+  (setq indent-tabs-mode nil)
   (linum-mode 1)
   )
 (add-hook 'pug-mode-hook 'my-pug-mode-hook)
